@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "devrelwriter"
+version = "0.1.0"
+description = "DevRelWriter using CrewAI"
+authors = ["Tony Kipkemboi <tony@crewai.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.63.1,<1.0.0" }
+
+
+[tool.poetry.scripts]
+devrelwriter = "devrelwriter.main:run"
+run_crew = "devrelwriter.main:run"
+train = "devrelwriter.main:train"
+replay = "devrelwriter.main:replay"
+test = "devrelwriter.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
